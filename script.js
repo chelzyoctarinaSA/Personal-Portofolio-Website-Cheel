@@ -26,3 +26,24 @@ ScrollReveal().reveal('.home-img, .skills-container, .service-container, .contac
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.querySelector('input[placeholder="Full Name"]').value;
+    const email = document.querySelector('input[placeholder="Email"]').value;
+    const phone = document.querySelector('input[placeholder="Phone Number"]').value;
+    const subject = document.querySelector('input[placeholder="Subject"]').value;
+    const message = document.querySelector('textarea[placeholder="Your Message"]').value;
+    
+    const myPhoneNumber = "6285796902590"; 
+
+    const textMessage = `*Pesan Baru dari Website Portofolio*%0A%0A` +
+                        `*Nama:* ${name}%0A` +
+                        `*Email:* ${email}%0A` +
+                        `*No HP:* ${phone}%0A` +
+                        `*Subjek:* ${subject}%0A%0A` +
+                        `*Pesan:*%0A${message}`;
+
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${myPhoneNumber}&text=${textMessage}`;
+    window.open(whatsappURL, '_blank');
+});
