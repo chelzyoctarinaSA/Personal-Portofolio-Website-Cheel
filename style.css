@@ -173,10 +173,6 @@ span {
     line-height: 1.3;
 }
 
-.home-content h3, .about-content h3 {
-    font-size: 3rem; margin-bottom: 1rem;
-}
-
 .home-content p, .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
@@ -240,6 +236,10 @@ span {
 .about-content h2 { 
     text-align: top;
     line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 3rem; margin-bottom: 1rem;
 }
 
 /*==================== SKILLS & SERVICES ====================*/
