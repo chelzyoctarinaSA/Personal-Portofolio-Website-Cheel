@@ -25,3 +25,18 @@ ScrollReveal().reveal('.heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .skills-container, .service-container, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var typed = new Typed('#typing-hero', {
+    strings: [
+      'Actuarial Student', 
+      'Digital Designer', 
+      'Data Storyteller'
+    ],
+    typeSpeed: 60,
+    backSpeed: 40,
+    backDelay: 2000,
+    loop: true,
+    cursorChar: '|',
+  });
+});
